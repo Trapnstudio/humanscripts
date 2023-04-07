@@ -3,7 +3,7 @@
 // @name         Minimal Instagram
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Hide posts on your Instagram feed from people you don't follow. Hide stories from people you follow. Hide comments. Keep your circle tight. Keep your focus tighter.
+// @description  Hide posts on your Instagram feed from people you don't follow. Hide stories. Hide comments. Keep your circle tight. Keep your focus tighter.
 // @author       Memije.io
 // @match        https://www.instagram.com/*
 // @license      MIT
