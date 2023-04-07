@@ -1,3 +1,4 @@
+// @ts-check
 // ==UserScript==
 // @name         Monospace All Sites
 // @namespace    http://tampermonkey.net/

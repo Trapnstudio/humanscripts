@@ -1,3 +1,4 @@
+// @ts-check
 // ==UserScript==
 // @name         Sort Google Domains
 // @namespace    https://greasyfork.org/en/users/673321-christianmemije
