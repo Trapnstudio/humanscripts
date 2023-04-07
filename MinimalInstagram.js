@@ -77,9 +77,14 @@
         ),
       );
       comments.forEach((post) => {
+        const btn = post.closest('button');
         const elmToHide =
-          post.closest('button')?.parentElement?.parentElement?.parentElement
-            ?.parentElement;
+          btn &&
+          btn.parentElement &&
+          btn.parentElement.parentElement &&
+          btn.parentElement.parentElement.parentElement &&
+          btn.parentElement.parentElement.parentElement.parentElement;
+
         if (elmToHide) {
           const roleAttribute = elmToHide.getAttribute('role');
           if (roleAttribute !== 'presentation') {
@@ -103,7 +108,10 @@
       if (url.pathname.endsWith('/comments/')) {
         const moreComments = Array.from(document.querySelectorAll('h3'));
         moreComments.forEach((elem) => {
-          const grandParent = elem?.parentElement?.parentElement?.parentElement;
+          const grandParent =
+            elem.parentElement &&
+            elem.parentElement.parentElement &&
+            elem.parentElement.parentElement.parentElement;
           if (grandParent) {
             grandParent.style.visibility = 'hidden';
           }
