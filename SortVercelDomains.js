@@ -1,13 +1,13 @@
 // @ts-check
 // ==UserScript==
 // @name         Sort Vercel Domains
-// @namespace    https://greasyfork.org/en/users/673321-christianmemije
-// @version      0.4
+// @version      0.5
 // @description  Sort the search results from Vercel Domains (vercel.com/domains)
-// @author       Memije.io
-// @match https://vercel.com/*
+// @match        https://vercel.com/*
 // @grant        none
 // @license      MIT
+// @namespace    MEMIJE.IO
+// @author       MEMIJE.IO
 // ==/UserScript==
 
 (function () {

@@ -1,13 +1,13 @@
 // @ts-check
 // ==UserScript==
 // @name         Sort Google Domains
-// @namespace    https://greasyfork.org/en/users/673321-christianmemije
-// @version      0.4
+// @version      0.5
 // @description  Sort the search results from Google Domains (domains.google.com)
-// @author       Memije.io
-// @match https://domains.google.com/*
+// @match        https://domains.google.com/*
 // @grant        none
 // @license      MIT
+// @namespace    MEMIJE.IO
+// @author       MEMIJE.IO
 // ==/UserScript==
 
 (function () {

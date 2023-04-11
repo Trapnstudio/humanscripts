@@ -1,13 +1,14 @@
 // @ts-check
 // ==UserScript==
 // @name         Monospace All Sites
-// @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Monospace everything. Keep things simple.
-// @author       You
 // @match        *://*/*
 // @grant        none
-// @run-at document-body
+// @run-at       document-body
+// @license      MIT
+// @namespace    MEMIJE.IO
+// @author       MEMIJE.IO
 // ==/UserScript==
 
 (function () {

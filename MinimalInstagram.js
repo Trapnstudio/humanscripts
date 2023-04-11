@@ -1,13 +1,13 @@
 // @ts-check
 // ==UserScript==
 // @name         Minimal Instagram
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Hide posts on your Instagram feed from people you don't follow. Hide stories. Hide comments. Keep your circle tight. Keep your focus tighter.
-// @author       Memije.io
+// @version      0.2
+// @description  Hide posts on your Instagram feed from people you don't follow. Hide stories. Hide comments.  Keep your circle tight. Keep your focus tighter.
 // @match        https://www.instagram.com/*
-// @license      MIT
 // @grant        none
+// @license      MIT
+// @namespace    MEMIJE.IO
+// @author       MEMIJE.IO
 // ==/UserScript==
 
 (function () {
@@ -26,12 +26,11 @@
 
     // Nuke explore and reels page
     const nukeExploreAndReelsPage = () => {
-      const url = new URL(window.location.href);
+      const { pathname } = new URL(window.location.href);
       const main = document.querySelector('main');
-      if (
-        url.pathname.startsWith('/explore/') ||
-        url.pathname.startsWith('/reels/')
-      ) {
+      const exploreRootPath = '/explore/';
+      const reelsRootPath = '/reels/';
+      if ([exploreRootPath, reelsRootPath].includes(pathname)) {
         if (main) {
           main.style.display = 'none';
           return;
@@ -54,9 +53,9 @@
       const posts = Array.from(
         document.querySelectorAll('article[role="presentation"]'),
       );
-      const url = new URL(window.location.href);
+      const { pathname } = new URL(window.location.href);
       const unwantedPosts = posts.filter((post) => {
-        if (url.pathname !== '/') {
+        if (pathname !== '/') {
           return false; // if you're not on the root page, don't hide
         }
 
@@ -103,9 +102,9 @@
     };
 
     const nukeCommentsOnCommentsPage = () => {
-      const url = new URL(window.location.href);
+      const { pathname } = new URL(window.location.href);
 
-      if (url.pathname.endsWith('/comments/')) {
+      if (pathname.endsWith('/comments/')) {
         const moreComments = Array.from(document.querySelectorAll('h3'));
         moreComments.forEach((elem) => {
           const grandParent =
