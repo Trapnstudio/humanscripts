@@ -15,11 +15,22 @@
   {
     const throttle = (func, timeFrame) => {
       let lastTime = 0;
+      let timeoutId = null;
+
       return function () {
-        const now = Date.now();
-        if (now - lastTime >= timeFrame) {
+        const timeSinceLastCall = Date.now() - lastTime;
+
+        const runFunc = () => {
           func();
-          lastTime = now;
+          lastTime = Date.now();
+          timeoutId = null;
+        };
+
+        if (timeSinceLastCall >= timeFrame) {
+          clearTimeout(timeoutId);
+          runFunc();
+        } else if (!timeoutId) {
+          timeoutId = setTimeout(runFunc, timeFrame - timeSinceLastCall);
         }
       };
     };
