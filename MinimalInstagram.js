@@ -1,7 +1,7 @@
 // @ts-check
 // ==UserScript==
 // @name         Minimal Instagram
-// @version      0.3
+// @version      0.4
 // @description  Hide posts on your Instagram feed from people you don't follow. Hide stories. Hide comments.  Keep your circle tight. Keep your focus tighter.
 // @match        https://www.instagram.com/*
 // @grant        none
