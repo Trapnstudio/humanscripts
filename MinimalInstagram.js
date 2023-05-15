@@ -75,6 +75,17 @@
           return true; // if you don't follow the person, hide
         }
 
+        const header = post.querySelector('header');
+        if (
+          header &&
+          header.textContent &&
+          header.textContent
+            .toLowerCase()
+            .includes('Paid partnership'.toLowerCase())
+        ) {
+          return true; // if it is an ad, obviously, hide
+        }
+
         return false; // default to not hiding
       });
       unwantedPosts.forEach((elem) => (elem.style.visibility = 'hidden'));
