@@ -1,13 +1,13 @@
 // @ts-check
 // ==UserScript==
-// @name         Minimal Instagram
-// @version      0.5
+// @name         Mindfulgram
+// @version      0.6
 // @description  Hide posts on your Instagram feed from people you don't follow. Hide stories. Hide comments.  Keep your circle tight. Keep your focus tighter.
 // @match        https://www.instagram.com/*
 // @grant        none
 // @license      MIT
-// @namespace    TRAPNSTUDIO.DEV
-// @author       TRAPNSTUDIO.DEV
+// @namespace    MINDFULGRAM.APP
+// @author       MINDFULGRAM.APP
 // ==/UserScript==
 
 (function () {
