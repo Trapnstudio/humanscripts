@@ -1,7 +1,7 @@
 // @ts-check
 // ==UserScript==
 // @name         Mindfulgram
-// @version      0.6
+// @version      0.7
 // @description  Hide posts on your Instagram feed from people you don't follow. Hide stories. Hide comments.  Keep your circle tight. Keep your focus tighter.
 // @match        https://www.instagram.com/*
 // @grant        none
@@ -35,10 +35,7 @@ const $0dc44d32083a85be$var$nukeExploreAndReelsPage = ()=>{
     const main = document.querySelector("main");
     const exploreRootPath = "/explore/";
     const reelsRootPath = "/reels/";
-    if ([
-        exploreRootPath,
-        reelsRootPath
-    ].includes(pathname)) {
+    if (pathname === exploreRootPath || pathname.startsWith(reelsRootPath)) {
         if (main) {
             main.style.display = "none";
             return;
