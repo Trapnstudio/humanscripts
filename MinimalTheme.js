@@ -1,0 +1,59 @@
+// @ts-check
+// ==UserScript==
+// @name         Minimal theme
+// @version      0.3
+// @description  Make everything simpler and easy on the eyes.
+// @match        *://*/*
+// @grant        none
+// @run-at       document-body
+// @license      MIT
+// @namespace    TRAPNSTUDIO.DEV
+// @author       TRAPNSTUDIO.DEV
+// ==/UserScript==
+
+(function () {
+  'use strict';
+
+  const style = document.createElement('style');
+  style.innerHTML = `
+:root {
+  --min-theme-color-primary: #333333;
+  --min-theme-color-secondary: #F0F0F0;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --min-theme-color-primary: #F0F0F0;
+    --min-theme-color-secondary: #333333;
+  }
+}
+
+*, div, a, span, p, h1, h2, h3, h4, h5, h6, img, ul, li, ol, form, input, button, textarea, select, option, br, table, tr, td, th, nav, header, footer, main, section, article, aside, figure, figcaption, video, audio, source, track, canvas {
+  fill: var(--min-theme-color-primary) !important;
+  color: var(--min-theme-color-primary) !important;
+  border-color: var(--min-theme-color-primary) !important;
+  outline-color: var(--min-theme-color-primary) !important;
+  background-color: transparent !important;
+  text-decoration-color: var(--min-theme-color-primary) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+
+html, body {
+  background-color: var(--min-theme-color-secondary) !important;
+}
+
+
+::placeholder {
+  color: var(--min-theme-color-primary) !important;
+}
+
+::selection {
+  background-color: var(--min-theme-color-primary) !important;
+  color: var(--min-theme-color-secondary) !important;
+} `;
+  document.getElementsByTagName('head')[0].appendChild(style);
+})();
