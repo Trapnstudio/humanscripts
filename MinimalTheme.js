@@ -1,7 +1,7 @@
 // @ts-check
 // ==UserScript==
 // @name         Minimal theme
-// @version      0.3
+// @version      0.4
 // @description  Make everything simpler and easy on the eyes.
 // @match        *://*/*
 // @grant        none
@@ -29,7 +29,7 @@
   }
 }
 
-*, div, a, span, p, h1, h2, h3, h4, h5, h6, img, ul, li, ol, form, input, button, textarea, select, option, br, table, tr, td, th, nav, header, footer, main, section, article, aside, figure, figcaption, video, audio, source, track, canvas {
+* {
   fill: var(--min-theme-color-primary) !important;
   color: var(--min-theme-color-primary) !important;
   border-color: var(--min-theme-color-primary) !important;
@@ -39,6 +39,10 @@
   box-shadow: none !important;
   text-shadow: none !important;
   opacity: 1 !important;
+}
+
+*:hover, *:active, *:focus {
+  background-color: var(--min-theme-color-secondary) !important;
 }
 
 
@@ -54,6 +58,7 @@ html, body {
 ::selection {
   background-color: var(--min-theme-color-primary) !important;
   color: var(--min-theme-color-secondary) !important;
-} `;
+}
+`;
   document.getElementsByTagName('head')[0].appendChild(style);
 })();
