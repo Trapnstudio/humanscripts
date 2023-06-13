@@ -1,13 +1,14 @@
 // @ts-check
 // ==UserScript==
-// @name         Mindfulgram
-// @version      0.7
-// @description  Hide posts on your Instagram feed from people you don't follow. Hide stories. Hide comments.  Keep your circle tight. Keep your focus tighter.
+// @name         Mindfulgram for Instagram
+// @version      0.8
+// @description  Mindfulgram allows you to use Instagram in a mindful way, by removing the addictive content consuming aspects, and just leaving the useful aspects. Learn more on https://www.mindfulgram.app
 // @match        https://www.instagram.com/*
 // @grant        none
 // @license      MIT
 // @namespace    MINDFULGRAM.APP
 // @author       MINDFULGRAM.APP
+// @supportURL   https://www.mindfulgram.app
 // ==/UserScript==
 
 (function () {
